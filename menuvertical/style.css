@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Schoolbell';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Schoolbell Regular'), local('Schoolbell-Regular'), url(https://fonts.gstatic.com/s/schoolbell/v10/92zQtBZWOrcgoe-fgnJIZxUa6w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+body
+{
+    /*background: #252528;    Fondo de la pagina*/
+    font-family: 'Schoolbell', cursive;
+}
+
+/*INICIO MENU*/
+.menu
+{
+    list-style: none;   /*le saca las viñetas a la lista*/
+    line-height: 42px;  /*altura de linea*/
+    margin: 2em auto;    /*centrar el menu con 2em de margen superior*/
+    /*outline: 1px solid red;*/ /*ayuda a la maquetacion con un borde*/
+    padding-left: 0;    /*le saca el margen de la izquierda*/
+    width: 15em;    /*ancho del menu*/
+}
+
+.menu a{
+    color: #ddd;    /*color del texto*/
+    text-decoration: none;  /*para sacarle el subrayado*/
+    text-transform: uppercase;  /*todo el texto en mayusculas*/
+    -webkit-transition: all .5s;    /*Hace el cambio de estado retrasandolo un tiempo*/
+    -o-transition: all .5s;
+    transition: all .5s;
+    display: block; /* hace que todo el boton sea clikceable*/
+    width: 100%;
+}
+
+.menu a:hover{
+    margin-left: 1em;
+}
+
+.menu li{
+    box-shadow: 3px 0 rgba(255,255,255,.2) inset; /*la sombra del Borde crece hacia adentro*/
+    margin-bottom: 5px; /*margen hacia abajo de cada item*/
+    padding-left: 1em; /*margen separacion borde del item*/
+    /*outline: 1px solid green;*/   /*ayuda a la maquetacion*/
+    -webkit-transition: all .5s;    /*Hace el cambio de estado retrasandolo un tiempo*/
+    -o-transition: all .5s;
+    transition: all .5s;
+
+}
+
+.menu li:hover
+{
+    box-shadow: 15em 0 rgba(255,255,255,.2) inset; /*crea el efecto del relleno*/
+}
+/*FIN MENU*/
+
+/*POSICION RESPONSIVE DE MENU*/
+nav{
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    padding-top: 3em;
+    padding-right: .25em;
+    position: absolute;
+    left: -18em;
+    top: 0;
+    transition: all .3s;
+    z-index: 20;
+    height: 100%;
+}
+
+nav.mostrar{
+    left: 0;
+}
+
+#mostrar-nav
+{
+    background: url(icono_menu.png);
+    left: 2em;
+    height: 128px;
+    position: absolute;
+    top: 2em;
+    width: 128px;
+    z-index: 30;
+}
